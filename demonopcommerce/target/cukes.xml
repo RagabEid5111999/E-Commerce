@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="20" time="301.679">
+<testcase classname="User could register with valid data" name="user enter valid data to register" time="27.315">
+<system-out><![CDATA[Given user click on register................................................passed
+When user enter his data....................................................passed
+And user click submit.......................................................passed
+Then Your registration completed message....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could log in with valid email and password" name="user enter valid email and password" time="10.234">
+<system-out><![CDATA[Given user click on login button............................................passed
+When user Enter Email.......................................................passed
+And user enter password.....................................................passed
+And click enter key.........................................................passed
+Then user login Successfully................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could log in with valid email and password" name="user could login with invalid email and password" time="8.49">
+<system-out><![CDATA[Given user click on login button............................................passed
+When user login with "invalidtest@example.com" and "P@ssw0rd"...............passed
+And click enter key.........................................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could switch between currencies US-Euro" name="user select or switch between currencies US-Euro" time="7.043">
+<system-out><![CDATA[When user select "Euro".....................................................passed
+Then Verify Euro is shown in four product displayed in the home page........passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could select different Categories" name="user is haver and select category" time="6.85">
+<system-out><![CDATA[When user haver on computer category........................................passed
+And after hovering, you need to select random one of the three sub categories like Desktops.passed
+Then Assert that the sub-category title is (equal or contains) the one you get it while selecting random sub-category.passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could search for any product" name="user could search using product name" time="7.386">
+<system-out><![CDATA[Given click on search field to insert something inside......................passed
+When search for any product like "Apple"....................................passed
+Then url contains "nopCommerce demo store. Search"..........................passed
+And search shows relevant results "Apple"...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could search for any product" name="user could search using product name 2" time="8.287">
+<system-out><![CDATA[Given click on search field to insert something inside......................passed
+When search for any product like "Nike".....................................passed
+Then url contains "nopCommerce demo store. Search"..........................passed
+And search shows relevant results "Nike"....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could search for any product" name="user could search using product name 3" time="8.427">
+<system-out><![CDATA[Given click on search field to insert something inside......................passed
+When search for any product like "Laptop"...................................passed
+Then url contains "nopCommerce demo store. Search"..........................passed
+And search shows relevant results "Laptop"..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could search for any product" name="user could search for product using sku" time="57.237">
+<system-out><![CDATA[Given click on search field to insert something inside......................passed
+When search for any sku "SF_PRO_11".........................................passed
+And click on the product in search result...................................passed
+Then Verify the sku "SF_PRO_11".............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could search for any product" name="user could search for product using sku 2" time="10.692">
+<system-out><![CDATA[Given click on search field to insert something inside......................passed
+When search for any sku "APPLE_CAM".........................................passed
+And click on the product in search result...................................passed
+Then Verify the sku "APPLE_CAM".............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could search for any product" name="user could search for product using sku 3" time="10.384">
+<system-out><![CDATA[Given click on search field to insert something inside......................passed
+When search for any sku "SCI_FAITH".........................................passed
+And click on the product in search result...................................passed
+Then Verify the sku "SCI_FAITH".............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user will be able to open sliders in home page" name="first slider are clickable in home page" time="9.469">
+<failure message="expected:&lt;http[://demo.nopcommerce.com/iphone_s6]&gt; but was:&lt;http[s://demo.nopcommerce.com/]&gt;" type="org.junit.ComparisonFailure"><![CDATA[When user click on first slider.............................................passed
+Then relative product for first slider was displayed........................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<http[://demo.nopcommerce.com/iphone_s6]> but was:<http[s://demo.nopcommerce.com/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions._6_HomeSlidersSteps.relativeProductForFirstSliderWasDisplayed(_6_HomeSlidersSteps.java:19)
+	at ✽.relative product for first slider was displayed(file:///E:/Udacity/demonopcommerce/src/main/resources/features/_6_HomeSliders.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="user will be able to open sliders in home page" name="second slider are clickable in home page" time="11.431">
+<failure message="expected:&lt;http[://demo.nopcommerce.com/nokia-lumia-1020]&gt; but was:&lt;http[s://demo.nopcommerce.com/]&gt;" type="org.junit.ComparisonFailure"><![CDATA[When user click on second slider............................................passed
+Then relative product for second slider was displayed.......................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<http[://demo.nopcommerce.com/nokia-lumia-1020]> but was:<http[s://demo.nopcommerce.com/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions._6_HomeSlidersSteps.relativeProductForSecondSliderWasDisplayed(_6_HomeSlidersSteps.java:30)
+	at ✽.relative product for second slider was displayed(file:///E:/Udacity/demonopcommerce/src/main/resources/features/_6_HomeSliders.feature:10)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="8.743">
+<system-out><![CDATA[When user opens facebook link...............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="10.334">
+<system-out><![CDATA[When user opens twitter link................................................passed
+Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens rss link" time="9.719">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user opens rss link....................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab.failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at stepDefinitions._7_FollowUSSteps.isOpenedInNewTab(_7_FollowUSSteps.java:22)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab(file:///E:/Udacity/demonopcommerce/src/main/resources/features/_7_FollowUS.feature:14)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens youtube link" time="15.603">
+<system-out><![CDATA[When user opens youtube link................................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]></system-out>
+</testcase>
+<testcase classname="User add products to wishlist" name="guest user could add products to wishlist" time="9.979">
+<system-out><![CDATA[When User choose a random product and click on add to wishlist icon.........passed
+Then message appears says The product has been added to your wishlist.......passed
+]]></system-out>
+</testcase>
+<testcase classname="User add products to wishlist" name="user add product to wishlist" time="10.451">
+<system-out><![CDATA[When User choose a random product and click on add to wishlist icon.........passed
+And Click on wishlist tab...................................................passed
+Then Check QTY Number.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User add products to shopping cart" name="guest user could add products to shopping cart" time="52.886">
+<system-out><![CDATA[When User choose a random product and click on add to shopping cart button..passed
+Then message appears says The product has been added to your shopping cart..passed
+]]></system-out>
+</testcase>
+</testsuite>
